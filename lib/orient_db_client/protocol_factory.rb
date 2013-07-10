@@ -1,5 +1,6 @@
 require File.join(File.dirname(__FILE__), 'protocols', 'protocol7')
 require File.join(File.dirname(__FILE__), 'protocols', 'protocol12')
+require File.join(File.dirname(__FILE__), 'protocols', 'protocol15')
 
 module OrientDbClient
 	class ProtocolFactory
@@ -10,7 +11,8 @@ module OrientDbClient
 
 		PROTOCOLS = {
 			'7' => Protocols::Protocol7,
-      '12' => Protocols::Protocol12
+	      '12' => Protocols::Protocol12,
+	      '15' => Protocols::Protocol15
 		}
 
 		def self.get_protocol(version)
